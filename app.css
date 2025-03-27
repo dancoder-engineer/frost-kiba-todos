@@ -1,0 +1,60 @@
+
+
+.task{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    width:300px;
+    min-height:50px;
+    background-color: darkcyan;
+    margin: 5px 10px 5px 10px;
+
+    color:aqua;
+    font-weight: 900;
+    grid-column: 2;
+}
+
+.taskPic{
+    grid-column: 1;
+    height:50px;
+}
+
+
+.box{
+    margin: 0px auto;
+    min-width: 300px;
+    min-height: 300px;
+    background-color: blue;
+}
+
+.boxImg{
+    height:200px;
+    margin:auto;
+}
+
+header img{
+    width:95%;
+    margin:auto;
+}
+
+body{
+    background-color: #D4E6F7;
+}
+
+.holders{
+    display:flex;
+    justify-content: space-between;
+}
+
+.create{
+    width:95%;
+    min-height: 20px;
+    background-color: azure;
+    margin: 20px auto;
+    display:flex;
+    justify-content: center;
+}
+
+.smallMargin{
+    margin-right: 5px;
+}

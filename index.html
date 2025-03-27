@@ -1,0 +1,55 @@
+<!DOCYPE HTML>
+<html>
+<head>
+    <title>Frost-Kiba TODOs</title>
+    <script src="app.js"></script>
+    <link href="app.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <header>
+        <img src="banner.png">
+    </header>
+
+    <div class="create">
+        Enter a new Task here:  
+        <input id="createInput" class="smallMargin">
+        <button id="createButton" onClick="addTask(event)">Add Task</button>
+    </div>
+
+    <div class="holders">
+        <div id="todo" class="box" ondrop="dropHandler(event, '#todo')" ondragover="dragoverHandler(event)">
+            <img class="boxImg" src="undone.png">
+            <div id="task1" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Defeat X
+            </div>
+        
+            <div id="task2" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Make sure Repliforce hasn't been infiltrated by Sigma
+            </div>
+        </div>
+
+        <div id="inProgress" class="box" ondrop="dropHandler(event, '#inProgress')" ondragover="dragoverHandler(event)">
+            <img class="boxImg" src="inprogress.png">
+            <div id="task2" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Protect the secret weapon which lies inside the snow base
+            </div>
+        </div>
+        
+        <div id="done" class="box" ondrop="dropHandler(event, '#done')" ondragover="dragoverHandler(event)">
+            <img class="boxImg" src="finished.png">
+            <div id="task2" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Get Icy Penguigo and Frozen Buffalio's corpses and put them somewhere in the snow base
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

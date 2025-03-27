@@ -1,0 +1,146 @@
+<!DOCYPE HTML>
+<html>
+<head>
+    <title>Frost-Kiba TODOs</title>
+    <script>
+        let src = null
+        let nextTask = 5
+
+        function dragstartHandler(ev) {
+            src = ev.srcElement
+        }
+
+        function dragoverHandler(ev){
+            ev.preventDefault();
+        }
+
+        function dropHandler(ev, divName) {
+            ev.preventDefault();
+            box = document.querySelector(divName)
+            box.appendChild(src)
+            console.log(ev.target)
+        }
+
+        function addTask(){
+            
+            if(document.querySelector("#createInput").value){
+            let newTask = document.querySelector("#task1").cloneNode(true)
+            newTask.id = taskId="task" + nextTask
+            nextTask++
+            box = document.querySelector("#todo")
+            newTask.innerHTML = '<img src="frostTower.png" draggable="false" class="taskPic">' + document.querySelector("#createInput").value
+            document.querySelector("#createInput").value = ""
+            box.appendChild(newTask)
+            }
+        }
+    </script>
+    
+    <style>
+        .task{
+            display:grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 1fr;
+            width:300px;
+            min-height:50px;
+            background-color: darkcyan;
+            margin: 5px 10px 5px 10px;
+
+            color:aqua;
+            font-weight: 900;
+            grid-column: 2;
+        }
+
+        .taskPic{
+            grid-column: 1;
+            height:50px;
+        }
+
+
+        .box{
+            margin: 0px auto;
+            min-width: 300px;
+            min-height: 300px;
+            background-color: blue;
+        }
+
+        .boxImg{
+            height:200px;
+            margin:auto;
+        }
+
+        header img{
+            width:95%;
+            margin:auto;
+        }
+
+        body{
+            background-color: #D4E6F7;
+        }
+
+        .holders{
+            display:flex;
+            justify-content: space-between;
+        }
+
+        .create{
+            width:95%;
+            min-height: 20px;
+            background-color: azure;
+            margin: 20px auto;
+            display:flex;
+            justify-content: center;
+        }
+
+        .smallMargin{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <img src="banner.png">
+    </header>
+
+    <div class="create">
+        Enter a new Task here:  
+        <input id="createInput" class="smallMargin">
+        <button id="createButton" onClick="addTask(event)">Add Task</button>
+    </div>
+
+    <div class="holders">
+        <div id="todo" class="box" ondrop="dropHandler(event, '#todo')" ondragover="dragoverHandler(event)">
+            <img class="boxImg" src="undone.png">
+            <div id="task1" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Defeat X
+            </div>
+        
+            <div id="task2" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Make sure Repliforce hasn't been infiltrated by Sigma
+            </div>
+        </div>
+
+        <div id="inProgress" class="box" ondrop="dropHandler(event, '#inProgress')" ondragover="dragoverHandler(event)">
+            <img class="boxImg" src="inprogress.png">
+            <div id="task2" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Protect the secret weapon which lies inside the snow base
+            </div>
+        </div>
+        
+        <div id="done" class="box" ondrop="dropHandler(event, '#done')" ondragover="dragoverHandler(event)">
+            <img class="boxImg" src="finished.png">
+            <div id="task2" draggable="True" class="task" ondragstart="dragstartHandler(event)">
+                <img src="frostTower.png" draggable="false" class="taskPic">
+                Get Icy Penguigo and Frozen Buffalio's corpses and put them somewhere in the snow base
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
