@@ -48,7 +48,7 @@ body{
     display:flex;
     justify-content: space-between;
 
-    background-image: url('snow.png');
+    background-image: url('images/snow.png');
     background-repeat: repeat;
     background-position: center;
     background-size: auto;
@@ -73,21 +73,21 @@ body{
 }
 
 #todo{
-    background-image: url('cave-area.png');
+    background-image: url('images/cave-area.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #inProgress{
-    background-image: url('boss-area.png');
+    background-image: url('images/boss-area.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 #done{
-    background-image: url('snow-night.png');
+    background-image: url('images/snow-night.png');
     background-repeat: repeat;
     background-position: center;
     background-size: auto;
