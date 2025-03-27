@@ -21,10 +21,9 @@
 
 
 .box{
-    margin: 0px auto;
+    margin: 5vh auto;
     min-width: 300px;
     min-height: 300px;
-    background-color: blue;
 }
 
 .boxImg{
@@ -32,9 +31,9 @@
     margin:auto;
 }
 
-header img{
-    width:95%;
-    margin:auto;
+header{
+    display:flex;
+    justify-content:center
 }
 
 body{
@@ -44,10 +43,15 @@ body{
 .holders{
     display:flex;
     justify-content: space-between;
+
+    background-image: url('snow.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: auto;
 }
 
 .create{
-    width:95%;
+    width:50%;
     min-height: 20px;
     background-color: azure;
     margin: 20px auto;
@@ -57,4 +61,25 @@ body{
 
 .smallMargin{
     margin-right: 5px;
+}
+
+#todo{
+    background-image: url('cave-area.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#inProgress{
+    background-image: url('boss-area.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#done{
+    background-image: url('snow-night.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: auto;
 }
