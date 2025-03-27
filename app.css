@@ -33,7 +33,11 @@
 
 header{
     display:flex;
-    justify-content:center
+    justify-content:center;
+}
+
+header img{
+    margin-top: 5px;
 }
 
 body{
